@@ -16,7 +16,7 @@ export class ArticleService {
   async getArticle(id: number): Promise<Article[]> {
     return await this.articlesRepository.find({
       // Properties to return. We don't want the password property.
-      select: ['title', 'context', 'author', 'creationDate'],
+      select: ['title', 'context', 'author', 'date'],
       where: [{ id: id }],
     });
   }

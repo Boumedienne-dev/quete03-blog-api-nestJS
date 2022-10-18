@@ -14,6 +14,6 @@ export class Article {
   @Column({ length: 255 })
   author: string;
 
-  @Column({ length: 255 })
-  creationDate: string;
+  @Column({ type: 'date' })
+  date: Date;
 }
